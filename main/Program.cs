@@ -1,4 +1,5 @@
 ﻿using System;
+using main.Classes;
 
 namespace main
 {
@@ -6,7 +7,12 @@ namespace main
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("The fight begin!");
+            BattleSquare battleSquare = new BattleSquare(
+                new Wizard() { Name = "Paul", Age = 25 }, 
+                new Gladiator() { Name = "Maximus", Age = 32 }
+            );
+            battleSquare.Fight();
         }
     }
 }
